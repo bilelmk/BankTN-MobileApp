@@ -1,0 +1,55 @@
+<ion-header >
+  <ion-navbar style="margin: 0px ; padding: 0px ; border-bottom: 5px solid #004a7c">
+    <ion-row  align-items-center>
+      <ion-col col-2>
+        <button ion-button icon-only menuToggle>
+          <ion-icon class="nav-icon" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>Mot De Passe</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<div padding>
+  <form #form="ngForm" (ngSubmit)="logForm(form)" >
+    <ion-grid>
+
+      <ion-row style="margin-top:80px ;margin-bottom: 10px" >
+        <ion-col col-10>
+          <label  class="login-label">Ancien Mot De Passe</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input"  [(ngModel)]="amp"  name="amp" required type="password" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-bottom: 20px" >
+        <ion-col col-10>
+          <label  class="login-label">Nouveau Mot De Passe</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input"  [(ngModel)]="nmp"  name="nmp" required type="password" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-bottom: 20px" >
+        <ion-col col-10>
+          <label  class="login-label">Confirmer Le Mot De Passe</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input"  [(ngModel)]="cmp"  name="cmp" required type="password" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12>
+          <button [disabled]="!form.valid" class="login-btn" color="three" block  ion-button type="submit">Valider</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</div>

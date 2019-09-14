@@ -1,0 +1,18 @@
+page-virement {
+  background: linear-gradient(60deg, #00416e, #0064a5);
+}
+.succes {
+  > div{
+    background-color: #25a34b !important;
+    color: #c0c7cb;
+    text-align: center;
+  }
+}
+
+.fail {
+  > div{
+    background-color: #b81910 !important;
+    color: #c0c7cb;
+    text-align: center;
+  }
+}

@@ -1,0 +1,36 @@
+<!--
+  Generated template for the SoldePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar style="margin: 0px ; padding: 0px ;border-bottom: 5px solid #004a7c" >
+    <ion-title>Mes Comptes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<div style="margin-top: 80px" padding>
+
+  <ion-card class="compte-card" *ngFor="let compte of Comptes">
+    <ion-grid>
+      <ion-row>
+        <h2 class="compte-title" *ngIf="compte.numTypeCompte ==0">Compte Epargne</h2>
+        <h2 class="compte-title" *ngIf="compte.numTypeCompte ==1">Compte Courant</h2>
+      </ion-row>
+      <ion-row margin-top="20" >
+        <ion-col col-6>
+          <p class="compte-para bold">Numéro du compte :</p>
+          <p class="compte-para">{{compte.numCompte}}</p>
+          <p margin-top="10" class="compte-para bold">Date de création :</p>
+          <p class="compte-para ">{{compte.dateCreation}}</p>
+        </ion-col>
+        <ion-col  margin-left="5" col-5 style="border-left: 4px solid #004a7c">
+          <p margin-left="5" class="compte-para bold" >Solde</p>
+          <p margin-left="5" class="solde">{{compte.solde}} TND</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+</div>

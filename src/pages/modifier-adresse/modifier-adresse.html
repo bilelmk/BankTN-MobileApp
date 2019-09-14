@@ -1,0 +1,64 @@
+<ion-header >
+  <ion-navbar style="margin: 0px ; padding: 0px ; border-bottom: 5px solid #004a7c">
+    <ion-row  align-items-center>
+      <ion-col col-2>
+        <button ion-button icon-only menuToggle>
+          <ion-icon class="nav-icon" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>Adresse</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<div padding>
+  <form #form="ngForm" (ngSubmit)="logForm(form)" >
+    <ion-grid>
+
+      <ion-row style="margin-top:80px ;margin-bottom: 10px" >
+        <ion-col col-5>
+          <label  class="login-label">Gouvernerat</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input"  [(ngModel)]="adresse.gouvernorat"  name="gouvernerat" required type="text" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-bottom: 20px" >
+        <ion-col col-5>
+          <label  class="login-label">Ville</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input"  [(ngModel)]="adresse.ville"  name="ville" required type="text" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-bottom: 20px" >
+        <ion-col col-5>
+          <label  class="login-label">Quartier</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input"  [(ngModel)]="adresse.quartier"  name="quartier" required type="text" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-bottom: 20px" >
+        <ion-col col-5>
+          <label  class="login-label">Code Postal</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input"  [(ngModel)]="adresse.codePostal"  name="cp" required type="number" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12>
+          <button [disabled]="!form.valid" class="login-btn" color="three" block  ion-button type="submit">Valider</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</div>

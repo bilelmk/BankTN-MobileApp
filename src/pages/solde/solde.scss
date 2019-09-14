@@ -1,0 +1,23 @@
+page-solde {
+  background-color: #c6ced2;
+  .compte-card{
+    padding: 10px;
+    border-left: 5px solid #004a7c;
+    border-radius: 0px;
+  }
+  .compte-title{
+    color:#004a7c ;
+    font-weight: 600;
+  }
+  .compte-para{
+    color: #8f8f8f;
+  }
+  .bold{
+    font-weight: 600;
+  }
+  .solde{
+    color: #004a7c;
+    font-weight: bold;
+    font-size: 110%;
+  }
+}

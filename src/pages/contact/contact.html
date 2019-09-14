@@ -1,0 +1,62 @@
+<ion-header >
+  <ion-navbar style="margin: 0px ; padding: 0px ; border-bottom: 5px solid #004a7c">
+    <ion-row  align-items-center>
+      <ion-col col-2>
+        <button ion-button icon-only menuToggle>
+          <ion-icon class="nav-icon" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>Contactez Nous</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="compte-card" >
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col col-2>
+          <ion-icon class="contact-icon" name="at"></ion-icon>
+        </ion-col>
+        <ion-col col-10>
+          <p class="para" >Contact@banktunisie.com</p>
+        </ion-col>
+
+        <ion-col col-2>
+          <ion-icon class="contact-icon" name="call"></ion-icon>
+        </ion-col>
+        <ion-col col-10>
+          <p  class="para">85 111 000</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <ion-card class="compte-card" margin-top="15" >
+    <ion-grid>
+  <ion-item>
+    <ion-label class="avis">Vos Avis</ion-label>
+    <ion-range min="0" max="5" step="1" color="primary" pin="true" snaps="true" >
+      <ion-icon small range-left name="sad"></ion-icon>
+      <ion-icon range-right name="happy"></ion-icon>
+    </ion-range>
+  </ion-item>
+    <button ion-button block   >
+      Valider
+    </button>
+    </ion-grid>
+  </ion-card>
+  <ion-grid>
+    <button ion-button block  icon-start  >
+      <ion-icon name="pin"></ion-icon>
+      Géolocalisation
+    </button>
+    <button margin-top="10" ion-button block icon-start class="login-btn" color="three" >
+      <ion-icon name="send"></ion-icon>
+      Envoyer un message
+    </button>
+  </ion-grid>
+
+</ion-content>

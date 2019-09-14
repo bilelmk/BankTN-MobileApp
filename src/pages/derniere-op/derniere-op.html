@@ -1,0 +1,34 @@
+
+<ion-header >
+  <ion-navbar style="margin: 0px ; padding: 0px ; border-bottom: 5px solid #004a7c">
+    <ion-row  align-items-center>
+      <ion-col col-2>
+        <button ion-button icon-only menuToggle>
+          <ion-icon class="nav-icon" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>Historique</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+<div style="margin-top: 80px" padding >
+  <ion-card class="compte-card" *ngFor="let compte of Comptes">
+    <ion-grid (click)="getHistorique(compte.numCompte)">
+      <ion-row>
+        <h2 class="compte-title" *ngIf="compte.numTypeCompte ==0">Compte Epargne</h2>
+        <h2 class="compte-title" *ngIf="compte.numTypeCompte ==1">Compte Courant</h2>
+      </ion-row>
+      <ion-row margin-top="20" >
+        <ion-col col-6>
+          <p class="compte-para bold">Numéro du compte :</p>
+          <p class="compte-para">{{compte.numCompte}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+</div>

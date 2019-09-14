@@ -1,0 +1,52 @@
+<ion-header >
+  <ion-navbar style="margin: 0px ; padding: 0px ; border-bottom: 5px solid #004a7c">
+    <ion-row  align-items-center>
+      <ion-col col-2>
+        <button ion-button icon-only menuToggle>
+          <ion-icon class="nav-icon" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>Paramètres</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+
+<div  padding>
+  <ion-grid style="margin-top: 70px">
+    <ion-row>
+      <ion-col col-4 offset-1>
+        <a  [navPush]="ModifierAdresse" >
+          <img src="../../assets/imgs/ad.png">
+        </a>
+        <p class="menu-text" text-center>Changer Mon Adresse</p>
+      </ion-col>
+
+      <ion-col  col-4 offset-2>
+        <a  [navPush]="MotPasse">
+          <img src="../../assets/imgs/mp.png">
+        </a>
+        <p class="menu-text" text-center>Changer Mon Mot De Passe</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</div>
+
+
+
+
+
+    <!--<ion-row>-->
+      <!--<button ion-button [navPush]="ModifierAdresse">-->
+        <!--Modifier Adresse-->
+      <!--</button>-->
+      <!--<button ion-button [navPush]="MotPasse">-->
+        <!--Modifier Mot de Passe-->
+      <!--</button>-->
+    <!--</ion-row>-->
+

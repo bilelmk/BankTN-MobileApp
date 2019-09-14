@@ -1,0 +1,50 @@
+<ion-header >
+  <ion-navbar style="margin: 0px ; padding: 0px ; border-bottom: 5px solid #004a7c">
+    <ion-row  align-items-center>
+      <ion-col col-2>
+        <button ion-button icon-only menuToggle>
+          <ion-icon class="nav-icon" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>Consultations</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+
+<div  padding>
+  <ion-grid style="margin-top: 70px">
+    <ion-row>
+      <ion-col col-4 offset-1>
+        <a  [navPush]="Details" >
+          <img src="../../assets/imgs/details.png">
+        </a>
+        <p class="menu-text" text-center>Mon Profil</p>
+      </ion-col>
+
+      <ion-col col-4 offset-2>
+        <a  [navPush]="Comptes">
+          <img src="../../assets/imgs/mescomptes.png">
+        </a>
+        <p class="menu-text" text-center>Mes Comptes</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col  col-4 offset-4>
+        <a  [navPush]="DerOp">
+          <img src="../../assets/imgs/dern.png">
+        </a>
+        <p class="menu-text" text-center>Mes Dernières Opérations</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</div>
+
+
+

@@ -1,14 +1,65 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+<ion-header >
+  <ion-navbar style="margin: 0px ; padding: 0px ;border-bottom: 5px solid #004a7c">
+    <ion-row  align-items-center>
+      <ion-col col-2>
+        <button ion-button icon-only menuToggle>
+          <ion-icon class="nav-icon" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <img src="../../assets/imgs/logoB.png">
+      </ion-col>
+    <ion-col col-2>
+        <button clear ion-button icon-only (click)="logOut()">
+          <ion-icon class="nav-icon" name="power"></ion-icon>
+        </button>
+    </ion-col>
+  </ion-row>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<div  padding>
+  <ion-grid style="margin-top: 70px">
+    <ion-row>
+      <ion-col col-4 offset-1>
+        <a  [navPush]="Consultation">
+          <img src="../../assets/imgs/consultation.png">
+        </a>
+        <p class="menu-text" text-center>Consultations</p>
+      </ion-col>
+      <ion-col  col-4 offset-2>
+        <a  [navPush]="Virement">
+          <img src="../../assets/imgs/virement.png">
+        </a>
+        <p class="menu-text" text-center>Virements</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col  col-4 offset-1>
+        <a  [navPush]="Contact">
+          <img src="../../assets/imgs/contact.png">
+        </a>
+        <p class="menu-text" text-center>Contactez Nous</p>
+      </ion-col>
+      <ion-col  col-4 offset-2>
+        <a  [navPush]="Budget">
+          <img src="../../assets/imgs/budget.png">
+        </a>
+        <p class="menu-text" text-center>Budgets</p>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4 offset-4>
+        <a [navPush]="Compte">
+          <img src="../../assets/imgs/parametre.png">
+        </a>
+        <p class="menu-text" text-center>Paramètres</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</div>

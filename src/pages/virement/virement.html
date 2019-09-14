@@ -1,0 +1,73 @@
+<!--
+  Generated template for the VirementPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar style="margin: 0px ; padding: 0px ;border-bottom: 5px solid #004a7c">
+    <ion-row  align-items-center>
+      <ion-col col-2>
+        <button ion-button icon-only menuToggle>
+          <ion-icon class="nav-icon" name="menu"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-8>
+        <ion-title>Virements</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-navbar>
+
+</ion-header>
+
+<div style="margin-top: 80px" padding>
+  <form #form="ngForm" (ngSubmit)="logForm(form)" >
+    <ion-grid>
+
+      <ion-row >
+        <ion-col col-5>
+          <label  class="login-label">Mon Compte</label>
+        </ion-col>
+
+        <ion-col col-12>
+          <ion-list>
+            <ion-item color="three" class="login-input">
+              <ion-label>Choisir un compte</ion-label>
+              <ion-select ngModel name="compte"  multiple="false" cancelText="Cancel" okText="OK" required>
+                <div *ngFor="let compte of Comptes">
+                  <ion-option value="{{compte.numCompte}}" selected="true">{{compte.numCompte}}</ion-option>
+                </div>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row style="margin-bottom: 10px" >
+        <ion-col col-5>
+          <label  class="login-label">Compte bénéficiaire</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input" name="beneficiare" ngModel required type="number" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-bottom: 20px" >
+        <ion-col col-5>
+          <label  class="login-label">Montant</label>
+        </ion-col>
+        <ion-col col-12>
+          <input color="three" class="login-input" name="montant" ngModel   required type="number" />
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12>
+          <button [disabled]="!form.valid" class="login-btn" color="three" block  ion-button type="submit">Valider</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</div>
